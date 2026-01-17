@@ -16,7 +16,7 @@ import {
   Activity,
   Instagram
 } from 'lucide-react';
-import { Project, ProjectStatus, Skill, AutomationSystem } from './types';
+import { Project, ProjectStatus, Skill, AutomationSystem } from './types.ts';
 
 export const PROJECTS: Project[] = [
   {

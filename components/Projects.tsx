@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, X, ChevronRight, User, AlertCircle } from 'lucide-react';
-import { PROJECTS } from '../constants';
-import { Project, ProjectStatus } from '../types';
-import SEO from './SEO';
+import { PROJECTS } from '../constants.tsx';
+import { Project, ProjectStatus } from '../types.ts';
+import SEO from './SEO.tsx';
 
 const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> = ({ project, onOpen }) => {
   const getStatusColor = (status: ProjectStatus) => {

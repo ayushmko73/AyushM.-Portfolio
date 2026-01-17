@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Mail, Instagram } from 'lucide-react';
-import { SOCIAL_LINKS } from '../constants';
+import { SOCIAL_LINKS } from '../constants.tsx';
 
 const Footer: React.FC = () => {
   return (
