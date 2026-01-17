@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SYSTEMS } from '../constants.tsx';
+import { SYSTEMS } from '../constants';
 import { Zap } from 'lucide-react';
 
 const Systems: React.FC = () => {

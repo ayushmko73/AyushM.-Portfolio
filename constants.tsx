@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Zap, 
@@ -16,7 +15,7 @@ import {
   Activity,
   Instagram
 } from 'lucide-react';
-import { Project, ProjectStatus, Skill, AutomationSystem } from './types.ts';
+import { Project, ProjectStatus, Skill, AutomationSystem } from './types';
 
 export const PROJECTS: Project[] = [
   {

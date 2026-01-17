@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { LEARNING_ITEMS, ICON_MAP } from '../constants.tsx';
+import { LEARNING_ITEMS, ICON_MAP } from '../constants';
 
 const Learning: React.FC = () => {
   return (
