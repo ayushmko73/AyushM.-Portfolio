@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     role: 'Solo Product Designer & Builder',
     tags: ['Finance', 'Structured & Logical Thinking', 'Designing', 'Prompting'],
     seoDescription: 'Wealth Sprint is a revolutionary fintech product by Ayush M. designed to teach personal finance through logical systems and emotional intelligence.',
-    seoKeywords: ['fintech', 'finance education', 'wealth sprint', 'money management', 'ayush m projects']
+    seoKeywords: ['fintech', 'finance education', 'wealth sprint', 'money management']
   },
   {
     id: 'money-tracker',
@@ -37,11 +37,11 @@ export const PROJECTS: Project[] = [
     link: 'https://moneytrackerr.vercel.app/',
     description: 'Tracks income, expenses, debt, and cashflow — built to understand money movement clearly.',
     outcome: 'A comprehensive MVP for tracking personal cashflow and debt.',
-    role: 'Solo Product Builder & Designer',
+    role: 'Solo Product Builder',
     tags: ['Finance', 'Prompting', 'Database Integration'],
     leftToIntegrate: ['backend database integration', 'Auth & User security'],
     seoDescription: 'A clean, systematic approach to tracking personal cashflow, debt, and income built as an MVP for financial clarity.',
-    seoKeywords: ['money tracker', 'cashflow tracking', 'debt management', 'fintech mvp', 'ayush m money tracker']
+    seoKeywords: ['money tracker', 'cashflow tracking', 'debt management']
   },
   {
     id: 'ai-voice-agent',
@@ -51,9 +51,9 @@ export const PROJECTS: Project[] = [
     outcome: 'Bridging the gap between spoken commands and digital execution.',
     role: 'Solo Building',
     tags: ['voice recognition integration', 'AI API integration', 'Database Integration'],
-    leftToIntegrate: ['Database', 'Auth & data Security', 'Quick Reponse'],
+    leftToIntegrate: ['Database', 'Auth & data Security', 'Quick Response'],
     seoDescription: 'Developing a cutting-edge personal AI voice agent focusing on seamless productivity workflows and intelligent automation.',
-    seoKeywords: ['AI voice agent', 'automation', 'productivity ai', 'voice assistant', 'ai prompting']
+    seoKeywords: ['AI voice agent', 'automation', 'productivity ai']
   },
   {
     id: 'book-project',
@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
     tags: ['Deepen Human behaviour understanding', 'Emotional Resilience', 'Self Growth'],
     leftToIntegrate: ['Done only 3/4 of Story yet', 'Structuring & Format'],
     seoDescription: 'A Hinglish novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
-    seoKeywords: ['Hinglish novel', 'human behavior', 'psychology', 'emotional resilience', 'author ayush m']
+    seoKeywords: ['Hinglish novel', 'human behavior', 'psychology']
   }
 ];
 
@@ -83,7 +83,7 @@ export const SKILLS: Skill[] = [
   },
   {
     title: 'Finance + Product Strategy',
-    description: 'Understanding money flow, risk, compounding, emotional decision, and turning them into a MVP product.',
+    description: 'Understanding money flow, risk, compounding, emotional decision, and turning them into a MVP product. ',
     icon: 'TrendingUp'
   },
   {
