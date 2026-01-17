@@ -64,6 +64,7 @@ export const PROJECTS: Project[] = [
     outcome: 'Learnt about Real Human behaviour with own personal Experience',
     role: 'Author',
     tags: ['Deepen Human behaviour understanding', 'Emotional Resilience', 'Self Growth'],
+    leftToIntegrate: ['Done only 3/4 of Story yet', 'Structuring & Format'],
     seoDescription: 'A Hinglish novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
     seoKeywords: ['Hinglish novel', 'human behavior', 'psychology', 'emotional resilience', 'author ayush m']
   }
@@ -77,17 +78,17 @@ export const SKILLS: Skill[] = [
   },
   {
     title: 'AI Automation',
-    description: 'Built automations that deliver weekly financial insights directly to Gmail using connected data + AI analysis.',
+    description: 'Exploring AI automation by building small workflows that deliver weekly financial updates to Gmail.',
     icon: 'Cpu'
   },
   {
     title: 'Finance + Product Strategy',
-    description: 'Understanding money flow, risk, compounding, incentives, and turning them into product systems.',
+    description: 'Understanding money flow, risk, compounding, emotional decision, and turning them into a MVP product.',
     icon: 'TrendingUp'
   },
   {
     title: 'Builder Mindset',
-    description: 'Fast MVPs, iteration, feedback loops, shipping. Focusing on time-to-value.',
+    description: 'Deeply focused on build fast → fail fast → learn fast → iterate fast. I believe in practical learning through building, teaching, and product design — not just theory.',
     icon: 'Hammer'
   }
 ];

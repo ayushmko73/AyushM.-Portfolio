@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -12,12 +11,12 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="pt-32 pb-20 md:pt-48 md:pb-32 flex flex-col items-center text-center">
+    <section className="pt-32 pb-20 md:pt-48 md:pb-32 flex flex-col items-center text-center px-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass mb-8 text-xs font-medium text-emerald-400"
+        className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass mb-8 text-[10px] sm:text-xs font-medium text-emerald-400"
       >
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -30,11 +29,11 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
+        className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight"
       >
-        I build systems <br />
+        I build systems <br className="hidden sm:block" />
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
-          that compound.
+          that compound with time.
         </span>
       </motion.h1>
 
@@ -42,7 +41,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-slate-400 text-lg md:text-xl max-w-2xl mb-10"
+        className="text-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mb-10 px-2"
       >
         Ayush M — entrepreneur & product builder focused on technology, finance, AI and scalable systems.
       </motion.p>
@@ -51,7 +50,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="flex flex-col sm:flex-row gap-4"
+        className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
       >
         <button 
           onClick={() => scrollToSection('projects')}
