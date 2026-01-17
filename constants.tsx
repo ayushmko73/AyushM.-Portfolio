@@ -60,6 +60,7 @@ export const PROJECTS: Project[] = [
     title: 'No Longer Friends But Not Strangers Yet',
     status: ProjectStatus.IN_PROGRESS,
     type: 'Book / Writing project',
+    link: 'https://drive.google.com/file/d/14PlOZVVgkrL5GZ8wIS7inXXYIIFg8lfk/view?usp=drivesdk',
     description: 'A Hinglish Novel which helps for deepen understanding about how Human behaviour works with Multiple aspects of Emotions.',
     outcome: 'Learnt about Real Human behaviour with own personal Experience',
     role: 'Author',

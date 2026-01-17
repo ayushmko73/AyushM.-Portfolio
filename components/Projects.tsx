@@ -54,11 +54,15 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
         
         <div className="flex justify-end">
           {project.link ? (
-            <div
-              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-blue-600 text-[10px] font-bold text-white transition-all active:scale-95 shadow-lg shadow-blue-900/20"
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-blue-600 text-[10px] font-bold text-white transition-all active:scale-95 shadow-lg shadow-blue-900/20 hover:bg-blue-500"
             >
               Visit Site <ArrowUpRight size={12} />
-            </div>
+            </a>
           ) : (
             <button 
               disabled
