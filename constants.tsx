@@ -97,7 +97,7 @@ export const SKILLS: Skill[] = [
 export const SYSTEMS: AutomationSystem[] = [
   {
     title: 'Weekly Financial Data Analysis → Gmail',
-    description: 'Automated pipeline fetching market trends and personal data, processed via LLM, delivered to inbox.'
+    description: 'Automated pipeline fetching personal financial data from GoogleSheets, processed via LLM, delivered to inbox.'
   },
   {
     title: 'Prompt-based Productivity Workflows',
@@ -106,10 +106,19 @@ export const SYSTEMS: AutomationSystem[] = [
   {
     title: 'AI-driven Tracking Systems Mindset',
     description: 'Building frameworks that self-correct based on historical performance data.'
+  },
+  {
+    title: 'AI & Automation',
+    description: 'Developing autonomous workflows that leverage Large Language Models to handle complex cognitive tasks and data operations.'
   }
 ];
 
 export const LEARNING_ITEMS = [
+  {
+    title: 'AI & Automation',
+    description: 'Studying autonomous agent frameworks and LLM orchestration to build self-operating business logic.',
+    icon: 'BrainCircuit'
+  },
   {
     title: 'Cloud Database Integration',
     description: 'Learning scalable database + cloud integrations for production apps.',
