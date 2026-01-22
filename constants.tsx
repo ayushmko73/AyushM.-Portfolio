@@ -106,10 +106,6 @@ export const SYSTEMS: AutomationSystem[] = [
   {
     title: 'AI-driven Tracking Systems Mindset',
     description: 'Building frameworks that self-correct based on historical performance data.'
-  },
-  {
-    title: 'AI & Automation',
-    description: 'Developing autonomous workflows that leverage Large Language Models to handle complex cognitive tasks and data operations.'
   }
 ];
 
@@ -133,11 +129,6 @@ export const LEARNING_ITEMS = [
     title: 'Human Behaviour',
     description: 'Studying psychology and behavioral patterns behind money and decisions.',
     icon: 'UserCircle'
-  },
-  {
-    title: 'Focus & Execution Systems',
-    description: 'Improving consistency, discipline, and shipping speed through better routines and systems.',
-    icon: 'Activity'
   }
 ];
 
