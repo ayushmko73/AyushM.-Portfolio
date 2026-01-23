@@ -30,7 +30,8 @@ export const PROJECTS: Project[] = [
     link: 'https://genapp-builder-internal.app',
     subLinks: [
       { name: 'Calculator App', url: 'https://calculator-by-gen.vercel.app/' },
-      { name: 'Multiplayer AI Chess', url: 'https://chess-multi-ai.vercel.app/' }
+      { name: 'Multiplayer AI Chess', url: 'https://chess-multi-ai.vercel.app/' },
+      { name: 'Tic-Tac-Toe', url: 'https://tic-tac-toe-bygenai.vercel.app/' }
     ],
     seoDescription: 'GenApp Builder: An autonomous AI agent software that creates functional applications through natural language processing and end-to-end automated workflows.',
     seoKeywords: ['AI agent', 'GenApp Builder', 'autonomous coding', 'AI software development']
