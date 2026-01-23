@@ -5,6 +5,11 @@ export enum ProjectStatus {
   IN_PROGRESS = 'In Progress',
 }
 
+export interface SubLink {
+  name: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -19,6 +24,8 @@ export interface Project {
   type?: string;
   seoDescription?: string;
   seoKeywords?: string[];
+  isPrivate?: boolean;
+  subLinks?: SubLink[];
 }
 
 export interface Skill {

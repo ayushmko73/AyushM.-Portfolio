@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, X, ChevronRight, User, AlertCircle, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Github, X, ChevronRight, User, AlertCircle, ArrowUpRight, Lock, Sparkles } from 'lucide-react';
 import { PROJECTS } from '../constants';
 import { Project, ProjectStatus } from '../types';
 import SEO from './SEO';
@@ -53,7 +53,11 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
         </div>
         
         <div className="flex justify-end">
-          {project.link ? (
+          {project.isPrivate ? (
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/50 text-slate-500 text-[10px] font-bold border border-white/5 opacity-70">
+              <Lock size={12} /> Restricted
+            </div>
+          ) : project.link ? (
             <a
               href={project.link}
               target="_blank"
@@ -129,6 +133,29 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                   <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">{project.description}</p>
                 </div>
 
+                {project.subLinks && project.subLinks.length > 0 && (
+                  <div className="p-4 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-blue-500/5 border border-white/10">
+                    <h4 className="text-[9px] font-bold text-emerald-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                      <Sparkles size={12} /> 
+                      Demo Builds (Proof of Work)
+                    </h4>
+                    <div className="space-y-2">
+                      {project.subLinks.map((sub, i) => (
+                        <a 
+                          key={i} 
+                          href={sub.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all group/sub"
+                        >
+                          <span className="text-xs font-medium text-slate-200">{sub.name}</span>
+                          <ArrowUpRight size={14} className="text-slate-500 group-hover/sub:text-emerald-400 transition-colors" />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <h4 className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">My Role</h4>
@@ -170,7 +197,16 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           {/* Fixed Footer with Actions */}
           <div className="p-6 sm:p-8 border-t border-white/5 bg-slate-900/20 backdrop-blur-md">
             <div className="flex flex-col gap-2">
-              {project.link ? (
+              {project.isPrivate ? (
+                <div className="flex flex-col gap-3">
+                   <div className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-800/50 text-slate-500 font-bold text-xs border border-white/5 opacity-50 cursor-not-allowed">
+                    Private Deployment <Lock size={14} />
+                  </div>
+                  <p className="text-[9px] text-center text-slate-500 italic px-2">
+                    Access restricted due to computational overhead and API costs. Proof of work demonstrated in Demo Builds above.
+                  </p>
+                </div>
+              ) : project.link ? (
                 <a 
                   href={project.link} 
                   target="_blank" 

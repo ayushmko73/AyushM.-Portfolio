@@ -19,6 +19,23 @@ import { Project, ProjectStatus, Skill, AutomationSystem } from './types';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'genapp-builder',
+    title: 'GenApp Builder',
+    status: ProjectStatus.LIVE,
+    description: 'An autonomous AI orchestration platform designed to bridge the gap between natural language requirements and production-ready applications. By leveraging agentic workflows, it automates the entire software development lifecycle—architecting, coding, and deploying simple applications without a single line of manual code. The system manages the end-to-end execution of product logic through advanced LLM reasoning.',
+    outcome: 'Successful creation of a zero-code autonomous development agent capable of shipping functional utility apps.',
+    role: 'Lead AI Systems Architect',
+    tags: ['Autonomous Agents', 'LLM Orchestration', 'Zero-Code', 'Product Strategy'],
+    isPrivate: true,
+    link: 'https://genapp-builder-internal.app',
+    subLinks: [
+      { name: 'Calculator App', url: 'https://calculator-by-gen.vercel.app/' },
+      { name: 'Multiplayer AI Chess', url: 'https://chess-multi-ai.vercel.app/' }
+    ],
+    seoDescription: 'GenApp Builder: An autonomous AI agent software that creates functional applications through natural language processing and end-to-end automated workflows.',
+    seoKeywords: ['AI agent', 'GenApp Builder', 'autonomous coding', 'AI software development']
+  },
+  {
     id: 'wealth-sprint',
     title: 'Wealth Sprint',
     status: ProjectStatus.PROTOTYPE,
