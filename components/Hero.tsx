@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -43,7 +44,7 @@ const Hero: React.FC = () => {
         transition={{ delay: 0.3 }}
         className="text-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mb-10 px-2"
       >
-        Ayush M — entrepreneur & product builder focused on technology, finance, AI and scalable systems.
+        Ayush M. — entrepreneur & product builder focused on technology, finance, AI and scalable systems.
       </motion.p>
 
       <motion.div

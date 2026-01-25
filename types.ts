@@ -3,6 +3,7 @@ export enum ProjectStatus {
   PROTOTYPE = 'Prototype',
   LIVE = 'Live / MVP',
   IN_PROGRESS = 'In Progress',
+  COMPLETED = 'Completed',
 }
 
 export interface SubLink {
@@ -37,4 +38,14 @@ export interface Skill {
 export interface AutomationSystem {
   title: string;
   description: string;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  role: string;
+  company?: string;
+  content: string;
+  rating: number;
+  avatar?: string;
 }

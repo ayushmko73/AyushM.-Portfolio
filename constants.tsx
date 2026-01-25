@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   Zap, 
@@ -19,10 +20,28 @@ import { Project, ProjectStatus, Skill, AutomationSystem } from './types';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'wealth-sprint',
+    title: 'Wealth Sprint',
+    status: ProjectStatus.PROTOTYPE,
+    link: 'https://wealthsprint.vercel.app',
+    description: 'A finance learning product that blends emotion + logic + real-world money decisions into an interactive system. This is the central nexus of my entrepreneurial vision, where all other technical experiments converge into a single market-facing solution.',
+    outcome: 'Blends emotion and logic into an interactive finance learning system.',
+    role: 'Solo Product Designer & Builder',
+    tags: ['Finance', 'Structured & Logical Thinking', 'Designing', 'Prompting'],
+    seoDescription: 'Wealth Sprint is a revolutionary fintech product by Ayush M. designed to teach personal finance through logical systems and emotional intelligence.',
+    seoKeywords: ['fintech', 'finance education', 'wealth sprint', 'money management'],
+    subLinks: [
+      { 
+        name: 'Confidential Data', 
+        url: 'https://drive.google.com/file/d/1b560M9jk_fqhkAC9axU-WPGL9qgyz9IY/view?usp=drivesdk' 
+      }
+    ]
+  },
+  {
     id: 'genapp-builder',
     title: 'GenApp Builder',
     status: ProjectStatus.LIVE,
-    description: 'An autonomous AI orchestration platform designed to bridge the gap between natural language requirements and production-ready applications. By leveraging agentic workflows, it automates the entire software development lifecycle—architecting, coding, and deploying simple applications without a single line of manual code. The system manages the end-to-end execution of product logic through advanced LLM reasoning.',
+    description: 'An autonomous AI orchestration platform designed to bridge the gap between natural language requirements and production-ready applications. It serves as the technological engine for Wealth Sprint, allowing for rapid iteration of financial modules.',
     outcome: 'Successful creation of a zero-code autonomous development agent capable of shipping functional utility apps.',
     role: 'Lead AI Systems Architect',
     tags: ['Autonomous Agents', 'LLM Orchestration', 'Zero-Code', 'Product Strategy'],
@@ -37,23 +56,11 @@ export const PROJECTS: Project[] = [
     seoKeywords: ['AI agent', 'GenApp Builder', 'autonomous coding', 'AI software development']
   },
   {
-    id: 'wealth-sprint',
-    title: 'Wealth Sprint',
-    status: ProjectStatus.PROTOTYPE,
-    link: 'https://wealthsprint.vercel.app',
-    description: 'A finance learning product that blends emotion + logic + real-world money decisions into an interactive system.',
-    outcome: 'Blends emotion and logic into an interactive finance learning system.',
-    role: 'Solo Product Designer & Builder',
-    tags: ['Finance', 'Structured & Logical Thinking', 'Designing', 'Prompting'],
-    seoDescription: 'Wealth Sprint is a revolutionary fintech product by Ayush M. designed to teach personal finance through logical systems and emotional intelligence.',
-    seoKeywords: ['fintech', 'finance education', 'wealth sprint', 'money management']
-  },
-  {
     id: 'money-tracker',
     title: 'Money Tracker',
     status: ProjectStatus.IN_PROGRESS,
     link: 'https://moneytrackerr.vercel.app/',
-    description: 'Tracks income, expenses, debt, and cashflow — built to understand money movement clearly.',
+    description: 'Tracks income, expenses, debt, and cashflow — built to understand money movement clearly. This provides the fundamental data architecture for Wealth Sprint\'s analytical core.',
     outcome: 'A comprehensive MVP for tracking personal cashflow and debt.',
     role: 'Solo Product Builder',
     tags: ['Finance', 'Prompting', 'Database Integration'],
@@ -65,7 +72,7 @@ export const PROJECTS: Project[] = [
     id: 'ai-voice-agent',
     title: 'Personal AI Voice Agent',
     status: ProjectStatus.IN_PROGRESS,
-    description: 'First AI voice Agent for Testing my abilities',
+    description: 'First AI voice Agent for testing capabilities. This experiment informs the future conversational interface of Wealth Sprint, making complex finance accessible through speech.',
     outcome: 'Bridging the gap between spoken commands and digital execution.',
     role: 'Solo Building',
     tags: ['voice recognition integration', 'AI API integration', 'Database Integration'],
@@ -79,10 +86,10 @@ export const PROJECTS: Project[] = [
     status: ProjectStatus.IN_PROGRESS,
     type: 'Book / Writing project',
     link: 'https://drive.google.com/file/d/14PlOZVVgkrL5GZ8wIS7inXXYIIFg8lfk/view?usp=drivesdk',
-    description: 'A Hinglish Novel which helps for deepen understanding about how Human behaviour works with Multiple aspects of Emotions.',
+    description: 'A Hinglish Novel exploring human behaviour with Multiple aspects of Emotions. This psychological research forms the behavioral backbone of Wealth Sprint\'s emotional-logic framework.',
     outcome: 'Learnt about Real Human behaviour with own personal Experience',
     role: 'Author',
-    tags: ['Deepen Human behaviour understanding', 'Emotional Resilience', 'Self Growth'],
+    tags: ['Human behaviour', 'Emotional Resilience', 'Self Growth'],
     leftToIntegrate: ['Done only 3/4 of Story yet', 'Structuring & Format'],
     seoDescription: 'A Hinglish novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
     seoKeywords: ['Hinglish novel', 'human behavior', 'psychology']
@@ -107,7 +114,7 @@ export const SKILLS: Skill[] = [
   },
   {
     title: 'Builder Mindset',
-    description: 'Deeply focused on build fast → fail fast → learn fast → iterate fast. I believe in practical learning through building, teaching, and product design — not just theory.',
+    description: 'Deeply focused on build fast → fail fast → learn fast → iterate fast. I believe in practical learning through building, teaching, and product design not just theory.',
     icon: 'Hammer'
   }
 ];

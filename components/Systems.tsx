@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SYSTEMS } from '../constants';
@@ -10,7 +11,7 @@ const Systems: React.FC = () => {
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
         
         <div className="mb-12 relative z-10">
-          <h2 className="text-3xl font-bold mb-4">Automation & Systems I Build</h2>
+          <h2 className="text-3xl font-bold mb-4">Automation & Build Systems</h2>
           <p className="text-slate-400 max-w-xl">Removing friction through intelligent workflows and data logic.</p>
         </div>
 

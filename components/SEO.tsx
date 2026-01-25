@@ -17,7 +17,7 @@ const SEO: React.FC<SEOProps> = ({
   ogUrl 
 }) => {
   const baseTitle = "Ayush M. | FinTech Entrepreneur & Systems Builder";
-  const baseDescription = "Ayush M — entrepreneur & product builder focused on technology, finance, AI, and scalable systems.";
+  const baseDescription = "Ayush M. — entrepreneur & product builder focused on technology, finance, AI, and scalable systems.";
 
   useEffect(() => {
     document.title = title ? `${title} | Ayush M.` : baseTitle;
