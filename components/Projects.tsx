@@ -25,7 +25,7 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
       exit={{ opacity: 0, scale: 0.98 }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
-      className={`glass p-5 sm:p-6 rounded-[2rem] flex flex-col h-full group hover:border-blue-500/30 transition-all cursor-pointer relative overflow-hidden`}
+      className="glass p-5 sm:p-6 rounded-[2rem] flex flex-col h-full group hover:border-blue-500/30 transition-all cursor-pointer relative overflow-hidden"
       onClick={() => onOpen(project)}
     >
       <div className="flex justify-between items-center mb-5">
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
               <Lock size={10} /> Restricted
             </div>
           ) : (
-            <div className={`px-3 py-1.5 rounded-lg text-[9px] font-bold uppercase tracking-widest flex items-center gap-1.5 transition-colors shadow-lg bg-blue-600 text-white hover:bg-blue-500 shadow-blue-900/20`}>
+            <div className="px-3 py-1.5 rounded-lg text-[9px] font-bold uppercase tracking-widest flex items-center gap-1.5 transition-colors shadow-lg bg-blue-600 text-white hover:bg-blue-500 shadow-blue-900/20">
               Visit Site <ArrowUpRight size={10} />
             </div>
           )}
@@ -125,37 +125,37 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                 <p className="text-slate-400 text-[13.5px] leading-relaxed font-normal">{project.description}</p>
               </div>
 
-              {/* Project Assets Section */}
+              {/* Project Assets Section - Optimized for Compactness */}
               {project.subLinks && project.subLinks.length > 0 && (
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em] flex items-center gap-2">
                     <Sparkles size={12} className="text-blue-500/60" /> 
                     {isGenApp ? 'Proof' : 'Project Assets & Proofs'}
                   </h4>
-                  <div className="space-y-2.5">
+                  <div className="space-y-2">
                     {project.subLinks.map((sub, i) => (
                       <a 
                         key={i} 
                         href={sub.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-3.5 rounded-[1.1rem] bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/30 transition-all group/sub shadow-lg shadow-black/20"
+                        className="flex items-center gap-2.5 p-2.5 rounded-[1rem] bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/30 transition-all group/sub shadow-lg shadow-black/20"
                       >
-                        <div className="w-10 h-10 shrink-0 rounded-[1rem] bg-blue-500/10 flex items-center justify-center text-blue-400/80 group-hover/sub:text-blue-400 transition-colors">
+                        <div className="w-8 h-8 shrink-0 rounded-[0.8rem] bg-blue-500/10 flex items-center justify-center text-blue-400/80 group-hover/sub:text-blue-400 transition-colors">
                           {isGenApp ? (
-                            <Check size={18} strokeWidth={2.5} />
+                            <Check size={16} strokeWidth={2.5} />
                           ) : (
-                            <EyeOff size={18} strokeWidth={1.5} />
+                            <EyeOff size={16} strokeWidth={1.5} />
                           )}
                         </div>
                         <div className="flex-grow min-w-0">
-                          <span className="text-sm font-bold text-white block truncate leading-tight">{sub.name}</span>
-                          <span className="text-[9px] text-blue-400/60 mt-0.5 font-black uppercase tracking-wider block">
+                          <span className="text-[13px] font-bold text-white block truncate leading-tight">{sub.name}</span>
+                          <span className="text-[8.5px] text-blue-400/60 mt-0.5 font-black uppercase tracking-wider block">
                             {sub.description || (isGenApp ? 'Verified Asset' : 'Restricted Content')}
                           </span>
                         </div>
-                        <div className="shrink-0 text-slate-600 group-hover/sub:text-white transition-colors">
-                          <ArrowUpRight size={16} />
+                        <div className="shrink-0 pr-1 text-slate-600 group-hover/sub:text-white transition-colors">
+                          <ArrowUpRight size={14} />
                         </div>
                       </a>
                     ))}
@@ -163,7 +163,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                 </div>
               )}
 
-              {/* Footer Details (Role & Requirements) */}
+              {/* Footer Details */}
               <div className="grid grid-cols-2 gap-10 pt-4">
                 <div className="space-y-3">
                   <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em]">My Role</h4>
