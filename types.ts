@@ -9,6 +9,7 @@ export enum ProjectStatus {
 export interface SubLink {
   name: string;
   url: string;
+  description?: string;
 }
 
 export interface Project {

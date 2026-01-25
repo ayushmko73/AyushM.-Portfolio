@@ -14,7 +14,8 @@ import {
   LineChart,
   UserCircle,
   Activity,
-  Instagram
+  Instagram,
+  Linkedin
 } from 'lucide-react';
 import { Project, ProjectStatus, Skill, AutomationSystem } from './types';
 
@@ -27,13 +28,14 @@ export const PROJECTS: Project[] = [
     description: 'A finance learning product that blends emotion + logic + real-world money decisions into an interactive system. This is the central nexus of my entrepreneurial vision, where all other technical experiments converge into a single market-facing solution.',
     outcome: 'Blends emotion and logic into an interactive finance learning system.',
     role: 'Solo Product Designer & Builder',
-    tags: ['Finance', 'Structured & Logical Thinking', 'Designing', 'Prompting'],
-    seoDescription: 'Wealth Sprint is a revolutionary fintech product by Ayush M. designed to teach personal finance through logical systems and emotional intelligence.',
-    seoKeywords: ['fintech', 'finance education', 'wealth sprint', 'money management'],
+    tags: ['FINANCE', 'STRUCTURED & LOGICAL THINKING', 'DESIGNING', 'PROMPTING'],
+    seoDescription: 'Wealth Sprint is the primary compounding project by Ayush M., integrating AI automation, financial tracking, and behavioral psychology into one modular ecosystem.',
+    seoKeywords: ['fintech nexus', 'compounding systems', 'wealth sprint', 'ayush m projects'],
     subLinks: [
       { 
         name: 'Confidential Data', 
-        url: 'https://drive.google.com/file/d/1b560M9jk_fqhkAC9axU-WPGL9qgyz9IY/view?usp=drivesdk' 
+        url: 'https://drive.google.com/file/d/1b560M9jk_fqhkAC9axU-WPGL9qgyz9IY/view?usp=drivesdk',
+        description: 'ACCESS RESTRICTED • COLLABORATORS ONLY'
       }
     ]
   },
@@ -63,7 +65,7 @@ export const PROJECTS: Project[] = [
     description: 'Tracks income, expenses, debt, and cashflow — built to understand money movement clearly. This provides the fundamental data architecture for Wealth Sprint\'s analytical core.',
     outcome: 'A comprehensive MVP for tracking personal cashflow and debt.',
     role: 'Solo Product Builder',
-    tags: ['Finance', 'Prompting', 'Database Integration'],
+    tags: ['FINANCE', 'PROMPTING', 'DATABASE INTEGRATION'],
     leftToIntegrate: ['backend database integration', 'Auth & User security'],
     seoDescription: 'A clean, systematic approach to tracking personal cashflow, debt, and income built as an MVP for financial clarity.',
     seoKeywords: ['money tracker', 'cashflow tracking', 'debt management']
@@ -75,7 +77,7 @@ export const PROJECTS: Project[] = [
     description: 'First AI voice Agent for testing capabilities. This experiment informs the future conversational interface of Wealth Sprint, making complex finance accessible through speech.',
     outcome: 'Bridging the gap between spoken commands and digital execution.',
     role: 'Solo Building',
-    tags: ['voice recognition integration', 'AI API integration', 'Database Integration'],
+    tags: ['VOICE RECOGNITION INTEGRATION', 'AI API INTEGRATION', 'DATABASE INTEGRATION'],
     leftToIntegrate: ['Database', 'Auth & data Security', 'Quick Response'],
     seoDescription: 'Developing a cutting-edge personal AI voice agent focusing on seamless productivity workflows and intelligent automation.',
     seoKeywords: ['AI voice agent', 'automation', 'productivity ai']
@@ -89,7 +91,7 @@ export const PROJECTS: Project[] = [
     description: 'A Hinglish Novel exploring human behaviour with Multiple aspects of Emotions. This psychological research forms the behavioral backbone of Wealth Sprint\'s emotional-logic framework.',
     outcome: 'Learnt about Real Human behaviour with own personal Experience',
     role: 'Author',
-    tags: ['Human behaviour', 'Emotional Resilience', 'Self Growth'],
+    tags: ['HUMAN BEHAVIOUR', 'EMOTIONAL RESILIENCE', 'SELF GROWTH'],
     leftToIntegrate: ['Done only 3/4 of Story yet', 'Structuring & Format'],
     seoDescription: 'A Hinglish novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
     seoKeywords: ['Hinglish novel', 'human behavior', 'psychology']
@@ -159,6 +161,7 @@ export const LEARNING_ITEMS = [
 
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/ayushm_fintech?igsh=MW0ycnFneGJ2d2JrdA==",
+  linkedin: "https://www.linkedin.com/in/ayush-m-b8a46a3a8",
   email: "ayushxma@gmail.com"
 };
 
@@ -176,5 +179,6 @@ export const ICON_MAP: Record<string, React.ReactNode> = {
   LineChart: <LineChart className="w-5 h-5 text-emerald-400" />,
   UserCircle: <UserCircle className="w-5 h-5 text-purple-400" />,
   Activity: <Activity className="w-5 h-5 text-blue-400" />,
-  Instagram: <Instagram className="w-5 h-5" />
+  Instagram: <Instagram className="w-5 h-5" />,
+  Linkedin: <Linkedin className="w-5 h-5 text-blue-400" />
 };

@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Mail, Instagram } from 'lucide-react';
+import { Mail, Instagram, Linkedin } from 'lucide-react';
 import { SOCIAL_LINKS } from '../constants';
 
 const Footer: React.FC = () => {
@@ -17,10 +18,13 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex gap-6">
-          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors" aria-label="LinkedIn">
+            <Linkedin size={20} />
+          </a>
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors" aria-label="Instagram">
             <Instagram size={20} />
           </a>
-          <a href={`mailto:${SOCIAL_LINKS.email}`} className="text-slate-500 hover:text-white transition-colors">
+          <a href={`mailto:${SOCIAL_LINKS.email}`} className="text-slate-500 hover:text-white transition-colors" aria-label="Email">
             <Mail size={20} />
           </a>
         </div>
