@@ -29,7 +29,7 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
       onClick={() => onOpen(project)}
     >
       <div className="flex justify-between items-center mb-5">
-        <span className={`px-2.5 py-0.5 rounded-lg text-[8px] font-bold uppercase tracking-wider border ${getStatusColor(project.status)}`}>
+        <span className={`px-2.5 py-0.5 rounded-lg text-[8.5px] font-bold uppercase tracking-wider border ${getStatusColor(project.status)}`}>
           {project.status}
         </span>
         <div className="text-slate-600 group-hover:text-blue-400 transition-colors">
@@ -94,68 +94,68 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 20, opacity: 0 }}
-          className="glass w-full max-w-lg rounded-[2.5rem] relative shadow-2xl flex flex-col max-h-[90vh] overflow-hidden border-white/10"
+          className="glass w-full max-w-md rounded-[2.2rem] relative shadow-2xl flex flex-col max-h-[90vh] overflow-hidden border-white/10"
           onClick={e => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="p-8 pb-4 flex items-start justify-between">
-            <div className="space-y-1">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400 block">{project.status}</span>
-              <h3 className="text-3xl font-bold text-white tracking-tight">{project.title}</h3>
+          <div className="p-6 pb-2 flex items-start justify-between">
+            <div className="space-y-0.5">
+              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-blue-400 block">{project.status}</span>
+              <h3 className="text-2xl font-bold text-white tracking-tight">{project.title}</h3>
             </div>
             <button 
               onClick={onClose} 
-              className="p-2.5 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition-all"
+              className="p-2 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 transition-all"
             >
-              <X size={18} />
+              <X size={16} />
             </button>
           </div>
 
-          <div className="overflow-y-auto p-8 pt-4 space-y-10 custom-scrollbar">
-            <div className="space-y-8">
+          <div className="overflow-y-auto p-6 pt-2 space-y-8 custom-scrollbar">
+            <div className="space-y-6">
               {/* Core Outcome Box */}
-              <div className="p-6 rounded-[1.5rem] bg-blue-500/5 border border-blue-500/10 shadow-inner">
-                <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em] mb-3">Core Outcome</h4>
-                <p className="text-white text-base leading-relaxed font-medium">{project.outcome}</p>
+              <div className="p-4 rounded-[1.2rem] bg-blue-500/5 border border-blue-500/10 shadow-inner">
+                <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em] mb-2">Core Outcome</h4>
+                <p className="text-white text-[13px] leading-relaxed font-medium">{project.outcome}</p>
               </div>
 
               {/* Detailed Insight Section */}
-              <div className="space-y-3">
-                <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em]">Detailed Insight</h4>
-                <p className="text-slate-400 text-[13.5px] leading-relaxed font-normal">{project.description}</p>
+              <div className="space-y-2">
+                <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em]">Detailed Insight</h4>
+                <p className="text-slate-400 text-[12px] leading-relaxed font-normal">{project.description}</p>
               </div>
 
-              {/* Project Assets Section - Optimized for Compactness */}
+              {/* Project Assets Section - Compact Profile Maintained */}
               {project.subLinks && project.subLinks.length > 0 && (
-                <div className="space-y-3.5">
-                  <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em] flex items-center gap-2">
-                    <Sparkles size={12} className="text-blue-500/60" /> 
+                <div className="space-y-2.5">
+                  <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em] flex items-center gap-1.5">
+                    <Sparkles size={10} className="text-blue-500/60" /> 
                     {isGenApp ? 'Proof' : 'Project Assets & Proofs'}
                   </h4>
-                  <div className="space-y-2">
+                  <div className="flex flex-col gap-1.5">
                     {project.subLinks.map((sub, i) => (
                       <a 
                         key={i} 
                         href={sub.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2.5 p-2.5 rounded-[1rem] bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/30 transition-all group/sub shadow-lg shadow-black/20"
+                        className="flex items-center gap-2 p-1.5 px-2 rounded-[0.7rem] bg-blue-900/10 border border-blue-500/10 hover:border-blue-500/30 transition-all group/sub shadow-lg shadow-black/20 w-full max-w-[95%]"
                       >
-                        <div className="w-8 h-8 shrink-0 rounded-[0.8rem] bg-blue-500/10 flex items-center justify-center text-blue-400/80 group-hover/sub:text-blue-400 transition-colors">
+                        <div className="w-6 h-6 shrink-0 rounded-[0.5rem] bg-blue-500/10 flex items-center justify-center text-blue-400/80 group-hover/sub:text-blue-400 transition-colors">
                           {isGenApp ? (
-                            <Check size={16} strokeWidth={2.5} />
+                            <Check size={12} strokeWidth={3} />
                           ) : (
-                            <EyeOff size={16} strokeWidth={1.5} />
+                            <EyeOff size={12} strokeWidth={2} />
                           )}
                         </div>
                         <div className="flex-grow min-w-0">
-                          <span className="text-[13px] font-bold text-white block truncate leading-tight">{sub.name}</span>
-                          <span className="text-[8.5px] text-blue-400/60 mt-0.5 font-black uppercase tracking-wider block">
-                            {sub.description || (isGenApp ? 'Verified Asset' : 'Restricted Content')}
+                          <span className="text-[12px] font-bold text-white block truncate leading-none mb-0.5">{sub.name}</span>
+                          <span className="text-[8px] text-blue-400/60 font-black uppercase tracking-wider block leading-none">
+                            {sub.description || (isGenApp ? 'Verified' : 'Restricted')}
                           </span>
                         </div>
-                        <div className="shrink-0 pr-1 text-slate-600 group-hover/sub:text-white transition-colors">
-                          <ArrowUpRight size={14} />
+                        <div className="shrink-0 text-slate-600 group-hover/sub:text-white transition-colors">
+                          <ArrowUpRight size={12} />
                         </div>
                       </a>
                     ))}
@@ -164,19 +164,19 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
               )}
 
               {/* Footer Details */}
-              <div className="grid grid-cols-2 gap-10 pt-4">
-                <div className="space-y-3">
-                  <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em]">My Role</h4>
-                  <div className="flex items-start gap-2.5 text-white text-[13px] font-bold">
-                    <User size={14} className="text-blue-500/60 mt-0.5" />
+              <div className="grid grid-cols-2 gap-6 pt-2">
+                <div className="space-y-2">
+                  <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em]">My Role</h4>
+                  <div className="flex items-start gap-2 text-white text-[12px] font-bold">
+                    <User size={12} className="text-blue-500/60 mt-0.5" />
                     <span className="leading-tight">{project.role}</span>
                   </div>
                 </div>
-                <div className="space-y-3">
-                  <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.15em]">Core Requirements</h4>
-                  <div className="flex flex-wrap gap-1.5">
+                <div className="space-y-2">
+                  <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em]">Core Requirements</h4>
+                  <div className="flex flex-wrap gap-1">
                     {project.tags.map(tag => (
-                      <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 border border-white/5 text-[8px] text-slate-400 uppercase font-black tracking-tight">{tag}</span>
+                      <span key={tag} className="px-1.5 py-0.5 rounded-md bg-white/5 border border-white/5 text-[7.5px] text-slate-400 uppercase font-black tracking-tight">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -184,15 +184,15 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
 
               {/* Integrations Needed Section */}
               {hasIntegrations && (
-                <div className="p-6 rounded-[1.5rem] bg-amber-500/[0.03] border border-amber-500/10 shadow-inner">
-                  <div className="flex items-center gap-2 mb-4 text-amber-500/80">
-                    <AlertCircle size={14} />
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em]">Integrations Needed</h4>
+                <div className="p-4 rounded-[1.2rem] bg-amber-500/[0.03] border border-amber-500/10 shadow-inner">
+                  <div className="flex items-center gap-1.5 mb-3 text-amber-500/80">
+                    <AlertCircle size={12} />
+                    <h4 className="text-[9px] font-black uppercase tracking-[0.2em]">Integrations Needed</h4>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2">
                     {project.leftToIntegrate?.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-slate-400 text-[13px] leading-snug">
-                        <span className="text-amber-500/40 text-[15px] leading-none mt-0.5">•</span>
+                      <li key={idx} className="flex items-start gap-2 text-slate-400 text-[11px] leading-snug">
+                        <span className="text-amber-500/40 text-[14px] leading-none">•</span>
                         {item}
                       </li>
                     ))}
@@ -203,26 +203,26 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           </div>
 
           {/* Action Button */}
-          <div className="p-8 pt-4">
+          <div className="p-6 pt-2">
             {project.id === 'ai-voice-agent' ? (
-              <div className="w-full py-4 rounded-2xl bg-white/5 text-slate-500 font-bold text-[11px] text-center border border-white/10 uppercase tracking-[0.2em] shadow-inner">
+              <div className="w-full py-3.5 rounded-xl bg-white/5 text-slate-500 font-bold text-[10px] text-center border border-white/10 uppercase tracking-[0.2em] shadow-inner">
                 Coming soon
               </div>
             ) : project.isPrivate ? (
-              <div className="w-full py-4 rounded-2xl bg-slate-800/50 text-slate-500 font-bold text-[11px] uppercase tracking-[0.2em] text-center border border-white/5 flex items-center justify-center gap-2">
-                Restricted Access <Lock size={14} />
+              <div className="w-full py-3.5 rounded-xl bg-slate-800/50 text-slate-500 font-bold text-[10px] uppercase tracking-[0.2em] text-center border border-white/5 flex items-center justify-center gap-2">
+                Restricted Access <Lock size={12} />
               </div>
             ) : project.link ? (
               <a 
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-full py-4 rounded-2xl font-bold text-[11px] uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all shadow-xl bg-blue-600 text-white hover:bg-blue-700 shadow-blue-900/40"
+                className="w-full py-3.5 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-2 transition-all shadow-xl bg-blue-600 text-white hover:bg-blue-700 shadow-blue-900/40"
               >
-                Visit Site <ExternalLink size={14} />
+                Visit Site <ExternalLink size={12} />
               </a>
             ) : (
-              <div className="w-full py-4 rounded-2xl bg-white/5 text-slate-600 font-bold text-[11px] text-center border border-white/10 uppercase tracking-[0.2em]">
+              <div className="w-full py-3.5 rounded-xl bg-white/5 text-slate-600 font-bold text-[10px] text-center border border-white/10 uppercase tracking-[0.2em]">
                 Deployment Pending
               </div>
             )}
