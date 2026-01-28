@@ -1,4 +1,3 @@
-
 export enum ProjectStatus {
   PROTOTYPE = 'Prototype',
   LIVE = 'Live / MVP',
@@ -34,6 +33,14 @@ export interface Skill {
   title: string;
   description: string;
   icon: string;
+}
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  link: string;
+  level: string;
+  icon?: string;
 }
 
 export interface AutomationSystem {

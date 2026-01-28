@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Zap, 
@@ -15,9 +14,12 @@ import {
   UserCircle,
   Activity,
   Instagram,
-  Linkedin
+  Linkedin,
+  Award,
+  ShieldCheck,
+  ExternalLink
 } from 'lucide-react';
-import { Project, ProjectStatus, Skill, AutomationSystem } from './types';
+import { Project, ProjectStatus, Skill, AutomationSystem, Certificate } from './types';
 
 export const PROJECTS: Project[] = [
   {
@@ -121,6 +123,23 @@ export const SKILLS: Skill[] = [
   }
 ];
 
+export const CERTIFICATIONS: Certificate[] = [
+  {
+    title: 'Business Analysis Basics',
+    issuer: 'Industry Certification',
+    level: 'Foundational',
+    link: 'https://drive.google.com/file/d/1zUmSMRR6Pq-u4fI1AEsF2yk0TO8ScSyz/view?usp=drivesdk',
+    icon: 'Award'
+  },
+  {
+    title: 'Image Captioning AI Model',
+    issuer: 'Technical Specialization',
+    level: 'Beginner',
+    link: 'https://drive.google.com/file/d/1hX73fiDKgEsRmpyR-gHA8Qqf4WDau51p/view?usp=drivesdk',
+    icon: 'ShieldCheck'
+  }
+];
+
 export const SYSTEMS: AutomationSystem[] = [
   {
     title: 'Weekly Financial Data Analysis → Gmail',
@@ -180,5 +199,8 @@ export const ICON_MAP: Record<string, React.ReactNode> = {
   UserCircle: <UserCircle className="w-5 h-5 text-purple-400" />,
   Activity: <Activity className="w-5 h-5 text-blue-400" />,
   Instagram: <Instagram className="w-5 h-5" />,
-  Linkedin: <Linkedin className="w-5 h-5 text-blue-400" />
+  Linkedin: <Linkedin className="w-5 h-5 text-blue-400" />,
+  Award: <Award className="w-5 h-5 text-blue-400" />,
+  ShieldCheck: <ShieldCheck className="w-5 h-5 text-emerald-400" />,
+  ExternalLink: <ExternalLink size={14} />
 };

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Instagram, Linkedin } from 'lucide-react';
 import { SOCIAL_LINKS } from '../constants';

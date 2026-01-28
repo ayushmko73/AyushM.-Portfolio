@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Database, Bot, Zap, Heart, Lock, ArrowUpRight } from 'lucide-react';

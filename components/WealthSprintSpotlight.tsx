@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Layers, Target, TrendingUp } from 'lucide-react';
