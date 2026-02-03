@@ -137,6 +137,13 @@ export const CERTIFICATIONS: Certificate[] = [
     level: 'Beginner',
     link: 'https://drive.google.com/file/d/1hX73fiDKgEsRmpyR-gHA8Qqf4WDau51p/view?usp=drivesdk',
     icon: 'ShieldCheck'
+  },
+  {
+    title: 'AI in Finance',
+    issuer: 'Technical Specialization',
+    level: 'Foundational',
+    link: 'https://drive.google.com/file/d/1IEYhqpzL0lL5VF9z5EBZv-5FRbVSHgGd/view?usp=drivesdk',
+    icon: 'BrainCircuit'
   }
 ];
 
