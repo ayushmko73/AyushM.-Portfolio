@@ -6,10 +6,9 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'About', id: 'about' },
-    { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
-    { name: 'Work', id: 'work' },
+    { name: 'About', id: 'about' },
+    { name: 'Contact', id: 'contact' },
   ];
 
   const scrollToSection = (id: string) => {
@@ -21,79 +20,55 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-      <div className="max-w-6xl mx-auto glass rounded-2xl px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 pt-4 sm:pt-6">
+      <div className="max-w-4xl mx-auto glass rounded-[1.8rem] px-6 py-4 flex items-center justify-between border border-white/10 shadow-2xl bg-[#020617]/50">
+        <div 
+          className="flex items-center gap-3.5 cursor-pointer group" 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <div className="w-11 h-11 rounded-[0.9rem] bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center font-bold text-[18px] text-white shadow-[0_0_25px_rgba(59,130,246,0.35)] group-hover:scale-105 transition-transform shrink-0">
             A
           </div>
-          <span className="font-semibold text-lg tracking-tight hidden sm:block">Ayush M.</span>
+          <div className="flex flex-col">
+            <span className="text-[14px] font-bold text-white leading-none tracking-tight">Ayush M.</span>
+            <span className="text-[9px] font-black text-blue-400 uppercase tracking-[0.25em] mt-1.5 opacity-90">Founder @ Wealth Sprint</span>
+          </div>
         </div>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <button 
-              key={link.name} 
-              onClick={() => scrollToSection(link.id)}
-              className="text-sm text-slate-400 hover:text-white transition-colors cursor-pointer"
-            >
-              {link.name}
-            </button>
-          ))}
-          <button 
-            onClick={() => scrollToSection('contact')}
-            className="px-4 py-2 rounded-lg bg-white text-black text-sm font-medium hover:bg-slate-200 transition-colors cursor-pointer shadow-md"
-          >
-            Contact
-          </button>
-        </div>
-
-        {/* Mobile Menu Toggle */}
+        {/* Mobile-focused menu trigger exactly like the icon in screenshot */}
         <button 
-          className="md:hidden text-slate-400 hover:text-white z-50 p-1"
+          className="text-slate-400 hover:text-white p-2.5 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={28} strokeWidth={1.5} /> : <Menu size={28} strokeWidth={1.5} />}
         </button>
       </div>
 
       {/* Mobile Drawer */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {isOpen && (
           <>
-            {/* Background Overlay to close on outside click/tap/slide */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-40 md:hidden h-screen w-screen cursor-pointer"
+              className="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-[55] h-screen w-screen"
               onClick={() => setIsOpen(false)}
             />
             
             <motion.div
-              key="mobile-nav-panel"
-              drag="y"
-              dragConstraints={{ top: 0, bottom: 0 }}
-              onDragEnd={(_, info) => {
-                // Close if swiped up enough
-                if (info.offset.y < -50) setIsOpen(false);
-              }}
-              initial={{ opacity: 0, y: -20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="absolute top-20 left-4 right-4 glass rounded-3xl p-6 md:hidden flex flex-col gap-4 z-50 shadow-2xl border-blue-500/10"
+              initial={{ opacity: 0, scale: 0.95, y: -20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: -20 }}
+              className="absolute top-28 left-4 right-4 glass rounded-[2.2rem] p-10 z-[60] shadow-2xl border-white/10 flex flex-col gap-8"
             >
-              {/* Swipe handle indicator */}
-              <div className="w-12 h-1 bg-white/10 rounded-full mx-auto mb-2" />
-              
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <button 
                     key={link.name} 
                     onClick={() => scrollToSection(link.id)}
-                    className="text-left text-lg text-slate-300 py-3 border-b border-white/5 hover:text-white hover:pl-2 transition-all cursor-pointer"
+                    className="text-left text-3xl font-bold text-slate-300 py-2 hover:text-blue-400 transition-colors tracking-tight"
                   >
                     {link.name}
                   </button>
@@ -101,7 +76,7 @@ const Navbar: React.FC = () => {
               </div>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="mt-2 w-full text-center py-4 rounded-2xl bg-blue-600 text-white font-bold shadow-lg shadow-blue-900/40 active:scale-95 transition-all cursor-pointer"
+                className="mt-6 w-full text-center py-5 rounded-[1.2rem] bg-blue-600 text-white font-bold uppercase tracking-[0.2em] text-[11px] shadow-2xl shadow-blue-900/40"
               >
                 Get in Touch
               </button>

@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ayush M. | FinTech Entrepreneur & Systems Builder</title>
+    <title>Ayush M. | Founder of Wealth Sprint & Systems Builder</title>
     
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Ayush M. | FinTech Entrepreneur & Systems Builder">
-    <meta name="description" content="Ayush M. — entrepreneur & product builder focused on technology, finance, AI, and scalable systems. Building products at the intersection of logic, money, and human behavior." />
-    <meta name="keywords" content="Ayush M, Portfolio, FinTech Entrepreneur, Systems Builder, AI Automation, Product Builder, Wealth Sprint, Money Tracker, AI Voice Agent, SaaS, Entrepreneurship" />
+    <meta name="title" content="Ayush M. | Founder of Wealth Sprint & Systems Builder">
+    <meta name="description" content="Ayush M. — Founder of Wealth Sprint. Building systems at the intersection of finance, psychology, and logic to revolutionize financial learning." />
+    <meta name="keywords" content="Ayush M, Wealth Sprint Founder, FinTech Entrepreneur, Systems Builder, AI Automation, Financial Psychology, Product Builder" />
     <meta name="author" content="Ayush M." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://ayushm-portfolio.vercel.app/" />
@@ -16,8 +16,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ayushm-portfolio.vercel.app/">
-    <meta property="og:title" content="Ayush M. | FinTech Entrepreneur & Systems Builder">
-    <meta property="og:description" content="I build systems that compound with time. Exploring the intersection of finance, logic, and AI through scalable products.">
+    <meta property="og:title" content="Ayush M. | Founder of Wealth Sprint & Systems Builder">
+    <meta property="og:description" content="I build systems that compound with time. As the Founder of Wealth Sprint, I integrate finance, human behavior, and AI into scalable products.">
     <meta property="og:image" content="https://ayushm-portfolio.vercel.app/og-image.png">
     <meta property="og:site_name" content="Ayush M. Portfolio">
 
@@ -46,20 +46,22 @@
         background: #1e293b;
         border-radius: 10px;
       }
-      /* Prevent scrolling when modal is open */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
       body.modal-open {
         overflow: hidden;
         height: 100vh;
       }
       .glow-blue {
         box-shadow: 0 0 50px -12px rgba(59, 130, 246, 0.2);
-      }
-      .modal-content {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      .modal-content::-webkit-scrollbar {
-        display: none;
       }
     </style>
     <script type="importmap">
@@ -70,8 +72,9 @@
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "framer-motion": "https://esm.sh/framer-motion@11.11.11?external=react,react-dom",
     "lucide-react": "https://esm.sh/lucide-react@0.474.0?external=react,react-dom",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@0.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
     "vite": "https://esm.sh/vite@^7.3.1"
   }
 }

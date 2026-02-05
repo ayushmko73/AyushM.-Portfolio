@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CERTIFICATIONS, ICON_MAP } from '../constants';
+import { CERTIFICATIONS, ICON_MAP } from '../constants.tsx';
 import { ExternalLink, ShieldCheck } from 'lucide-react';
 
 export const Certifications: React.FC = () => {

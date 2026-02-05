@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SKILLS, ICON_MAP } from '../constants';
+import { SKILLS, ICON_MAP } from '../constants.tsx';
 
 const Skills: React.FC = () => {
   return (

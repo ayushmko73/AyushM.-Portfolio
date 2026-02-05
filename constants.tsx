@@ -19,7 +19,7 @@ import {
   ShieldCheck,
   ExternalLink
 } from 'lucide-react';
-import { Project, ProjectStatus, Skill, AutomationSystem, Certificate } from './types';
+import { Project, ProjectStatus, Skill, AutomationSystem, Certificate } from './types.ts';
 
 export const PROJECTS: Project[] = [
   {
@@ -187,7 +187,7 @@ export const LEARNING_ITEMS = [
 
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/ayushm_fintech?igsh=MW0ycnFneGJ2d2JrdA==",
-  linkedin: "https://www.linkedin.com/in/ayush-m-b8a46a3a8",
+  linkedin: "https://www.linkedin.com/in/ayush--b8a46a3a8",
   email: "ayushxma@gmail.com"
 };
 

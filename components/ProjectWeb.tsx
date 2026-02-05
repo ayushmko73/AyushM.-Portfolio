@@ -22,11 +22,15 @@ const ProjectWeb: React.FC = () => {
       </div>
 
       <div className="relative h-[400px] flex items-center justify-center mb-12">
-        <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
+        <svg 
+          viewBox="0 0 800 400" 
+          preserveAspectRatio="xMidYMid meet"
+          className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
+        >
           {nodes.map((node) => (
             <motion.path
               key={`path-${node.id}`}
-              d={`M 50% 50% L ${50 + (node.x / 4)}% ${50 + (node.y / 4)}%`}
+              d={`M 400 200 L ${400 + node.x} ${200 + node.y}`}
               stroke="rgba(59,130,246,0.1)"
               strokeWidth="1"
               fill="none"
@@ -102,7 +106,7 @@ const ProjectWeb: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold text-[10px] uppercase tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20"
             >
-              Visit Site <ArrowUpRight size={14} />
+              Access Data <ArrowUpRight size={14} />
             </a>
           </div>
         </motion.div>
