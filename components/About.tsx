@@ -44,7 +44,7 @@ const About: React.FC = () => {
             <div className="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-bold shrink-0 group-hover:scale-110 transition-transform">01</div>
             <div>
               <h3 className="font-bold text-xl mb-2 text-white">Systems Thinking</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">Architecting Wealth Sprint as a modular nexus where every satellite experiment (Voice AI, Trackers) feeds into a central ROI core.</p>
+              <p className="text-sm text-slate-400 leading-relaxed">Architecting Wealth Sprint as a primary Goal.  where every individual experiments  feed into a central ROI core.</p>
             </div>
           </div>
           <div className="flex gap-6 items-start group">
