@@ -87,16 +87,21 @@ export const PROJECTS: Project[] = [
   {
     id: 'book-project',
     title: 'No Longer Friends But Not Strangers Yet',
-    status: ProjectStatus.IN_PROGRESS,
+    status: ProjectStatus.LIVE,
     type: 'Book / Writing project',
-    link: 'https://drive.google.com/file/d/14PlOZVVgkrL5GZ8wIS7inXXYIIFg8lfk/view?usp=drivesdk',
-    description: 'A Hinglish Novel exploring human behaviour with Multiple aspects of Emotions. This psychological research forms the behavioral backbone of Wealth Sprint\'s emotional-logic framework.',
-    outcome: 'Learnt about Real Human behaviour with own personal Experience',
+    link: 'https://amzn.in/d/01vuCtQl',
+    description: 'A English novel tracing a character navigating silent attachment, rejection, and self-growth, capturing the fragile space where relationships lose definition, and two people remain neither truly connected nor completely strangers.',
+    outcome: 'Delivered a psychologically grounded novel translating human behaviour and emotional complexity into a narrative that explores identity, detachment, and the in-between state of modern relationships.',
     role: 'Author',
-    tags: ['HUMAN BEHAVIOUR', 'EMOTIONAL RESILIENCE', 'SELF GROWTH'],
-    leftToIntegrate: ['Done only 3/4 of Story yet', 'Structuring & Format'],
-    seoDescription: 'A Hinglish novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
-    seoKeywords: ['Hinglish novel', 'human behavior', 'psychology']
+    tags: [
+      'Human Behavior Analysis',
+      'Emotional Intelligence & Depth',
+      'Narrative Psychology',
+      'Character Development & Storytelling',
+      'AI-Assisted Creative Writing'
+    ],
+    seoDescription: 'An English novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
+    seoKeywords: ['English novel', 'human behavior', 'psychology']
   }
 ];
 
@@ -115,6 +120,11 @@ export const SKILLS: Skill[] = [
     title: 'Finance + Product Strategy',
     description: 'Understanding money flow, risk, compounding, emotional decision, and turning them into a MVP product. ',
     icon: 'TrendingUp'
+  },
+  {
+    title: 'Narrative Psychology',
+    description: 'Translating complex human behavior and emotional depth into structured, professional narratives and character-driven insights.',
+    icon: 'BookOpen'
   },
   {
     title: 'Builder Mindset',
@@ -144,6 +154,13 @@ export const CERTIFICATIONS: Certificate[] = [
     level: 'Foundational',
     link: 'https://drive.google.com/file/d/1IEYhqpzL0lL5VF9z5EBZv-5FRbVSHgGd/view?usp=drivesdk',
     icon: 'BrainCircuit'
+  },
+  {
+    title: 'Published Novelist Certification',
+    issuer: 'Literary Achievement',
+    level: 'Professional',
+    link: 'https://drive.google.com/file/d/1py8lvuzSHxoyKCTX7d2GIQajT01G8Cta/view?usp=drivesdk',
+    icon: 'BookOpen'
   }
 ];
 

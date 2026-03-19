@@ -40,11 +40,24 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
       <p className="text-slate-400 text-sm mb-6 flex-grow line-clamp-3 leading-relaxed opacity-80">{project.description}</p>
       
       <div className="flex flex-wrap gap-2 mb-8">
-        {project.tags.slice(0, 3).map(tag => (
-          <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 text-[8px] text-slate-500 uppercase font-bold whitespace-nowrap border border-white/5">
-            {tag}
-          </span>
-        ))}
+        {project.tags.length > 3 ? (
+          <>
+            {project.tags.slice(0, 2).map(tag => (
+              <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 text-[8px] text-slate-500 uppercase font-bold whitespace-nowrap border border-white/5">
+                {tag}
+              </span>
+            ))}
+            <span className="px-2 py-0.5 rounded-md bg-white/5 text-[8px] text-slate-500 uppercase font-bold whitespace-nowrap border border-white/5">
+              + {project.tags.length - 2} MORE
+            </span>
+          </>
+        ) : (
+          project.tags.map(tag => (
+            <span key={tag} className="px-2 py-0.5 rounded-md bg-white/5 text-[8px] text-slate-500 uppercase font-bold whitespace-nowrap border border-white/5">
+              {tag}
+            </span>
+          ))
+        )}
       </div>
 
       <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
@@ -123,6 +136,13 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                 <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em]">Detailed Insight</h4>
                 <p className="text-slate-400 text-[12px] leading-relaxed font-normal">{project.description}</p>
               </div>
+
+              {/* Mirror Philosophy Quote for Book Project */}
+              {project.id === 'book-project' && (
+                <div className="p-4 rounded-[1.2rem] bg-indigo-500/5 border border-indigo-500/10 italic text-indigo-200/70 text-[11px] leading-relaxed">
+                  "If someone’s presence activates your best version and their absence destroys it, then that version was never fully yours. It was triggered — not built."
+                </div>
+              )}
 
               {/* Project Assets Section - Compact Profile Maintained */}
               {project.subLinks && project.subLinks.length > 0 && (

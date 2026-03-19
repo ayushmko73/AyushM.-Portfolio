@@ -5,6 +5,7 @@ import About from './components/About.tsx';
 import Skills from './components/Skills.tsx';
 import { Certifications } from './components/Certifications.tsx';
 import Projects from './components/Projects.tsx';
+import ExecutionArc from './components/ExecutionArc.tsx';
 import Learning from './components/Learning.tsx';
 import Systems from './components/Systems.tsx';
 import Contact from './components/Contact.tsx';
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Skills />
         <Certifications />
         <Projects />
+        <ExecutionArc />
         <Learning />
         <Systems />
         <Contact />
