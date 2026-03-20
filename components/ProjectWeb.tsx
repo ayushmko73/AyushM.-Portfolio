@@ -17,7 +17,7 @@ const ProjectWeb: React.FC = () => {
       <div className="text-center mb-16 relative z-10 px-4">
         <h2 className="text-2xl font-bold mb-3 tracking-tight">Strategic Architecture</h2>
         <p className="text-slate-500 max-w-lg mx-auto text-xs font-medium leading-relaxed uppercase tracking-widest">
-          Modular components engineered to power a <span className="text-blue-400 font-bold">single compounding nexus</span>.
+          Modular components engineered to power a <span className="text-blue-400 font-bold">single compounding ecosystem</span>.
         </p>
       </div>
 
@@ -54,7 +54,7 @@ const ProjectWeb: React.FC = () => {
               <Database size={16} />
             </div>
             <div className="text-center">
-              <span className="text-[8px] font-black text-blue-400 uppercase tracking-widest block">Nexus</span>
+              <span className="text-[8px] font-black text-blue-400 uppercase tracking-widest block">Core</span>
               <span className="text-xs font-bold text-white block">W.S. Core</span>
             </div>
           </div>

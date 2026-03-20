@@ -29,10 +29,17 @@ export interface Project {
   subLinks?: SubLink[];
 }
 
+export interface ExecutionItem {
+  name: string;
+  description: string;
+}
+
 export interface Skill {
   title: string;
   description: string;
   icon: string;
+  proofOfWork?: string;
+  executions?: ExecutionItem[];
 }
 
 export interface Certificate {

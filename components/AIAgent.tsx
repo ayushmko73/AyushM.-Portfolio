@@ -39,7 +39,7 @@ const AIAgent: React.FC = () => {
         - Primary Title: Founder of Wealth Sprint.
         - Role: FinTech Entrepreneur & Systems Builder.
         - Vision: Transforming financial learning by integrating Finance + Psychology + Logic.
-        - Core Project: Wealth Sprint is his "Nexus" project. Everything else (GenApp Builder, Voice Agents) are modular components feeding into this ecosystem.
+        - Core Project: Wealth Sprint is his primary project. Everything else (GenApp Builder, Voice Agents) are modular components feeding into this ecosystem.
         - Behavioral Research: Ayush is also an author ("No Longer Friends But Not Strangers Yet"), which informs the psychological depth of Wealth Sprint.
         
         Instructions:
@@ -60,7 +60,7 @@ const AIAgent: React.FC = () => {
       setMessages(prev => [...prev, { role: 'ai', text: response.text || "Systems encountered a brief logic failure. Please re-synchronize." }]);
     } catch (error) {
       console.error('AI Error:', error);
-      setMessages(prev => [...prev, { role: 'ai', text: "Error connecting to the nexus logic core. Systems offline." }]);
+      setMessages(prev => [...prev, { role: 'ai', text: "Error connecting to the logic core. Systems offline." }]);
     } finally {
       setIsLoading(false);
     }
@@ -130,7 +130,7 @@ const AIAgent: React.FC = () => {
                       <span className="w-1 h-1 bg-blue-500/50 rounded-full animate-bounce [animation-delay:0.2s]"></span>
                       <span className="w-1 h-1 bg-blue-500/50 rounded-full animate-bounce [animation-delay:0.4s]"></span>
                     </div>
-                    <span className="text-[9px] font-black text-slate-600 uppercase tracking-[0.2em]">Consulting Nexus Logs</span>
+                    <span className="text-[9px] font-black text-slate-600 uppercase tracking-[0.2em]">Consulting System Logs</span>
                   </div>
                 </div>
               )}
@@ -162,7 +162,7 @@ const AIAgent: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-1.5 opacity-40">
                   <Cpu size={10} className="text-emerald-400" />
-                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Nexus-Linked</span>
+                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest">System-Linked</span>
                 </div>
               </div>
             </div>

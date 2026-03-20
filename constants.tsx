@@ -27,12 +27,12 @@ export const PROJECTS: Project[] = [
     title: 'Wealth Sprint',
     status: ProjectStatus.PROTOTYPE,
     link: 'https://wealthsprint.vercel.app',
-    description: 'A finance learning product that blends emotion + logic + real-world money decisions into an interactive system. This is the central nexus of my entrepreneurial vision, where all other technical experiments converge into a single market-facing solution.',
+    description: 'A finance learning product that blends emotion + logic + real-world money decisions into an interactive system. This is the central core of my entrepreneurial vision, where all other technical experiments converge into a single market-facing solution.',
     outcome: 'Blends emotion and logic into an interactive finance learning system.',
     role: 'Solo Product Designer & Builder',
     tags: ['FINANCE', 'STRUCTURED & LOGICAL THINKING', 'DESIGNING', 'PROMPTING'],
     seoDescription: 'Wealth Sprint is the primary compounding project by Ayush M., integrating AI automation, financial tracking, and behavioral psychology into one modular ecosystem.',
-    seoKeywords: ['fintech nexus', 'compounding systems', 'wealth sprint', 'ayush m projects'],
+    seoKeywords: ['fintech ecosystem', 'compounding systems', 'wealth sprint', 'ayush m projects'],
     subLinks: [
       { 
         name: 'Confidential Data', 
@@ -101,7 +101,14 @@ export const PROJECTS: Project[] = [
       'AI-Assisted Creative Writing'
     ],
     seoDescription: 'An English novel exploring human behavior, emotional distance, and psychological resilience by Ayush M.',
-    seoKeywords: ['English novel', 'human behavior', 'psychology']
+    seoKeywords: ['English novel', 'human behavior', 'psychology'],
+    subLinks: [
+      {
+        name: 'Confidential Manuscript Data',
+        url: 'https://drive.google.com/file/d/1t64yJAJ3dJSn7X7pGOReQvSzH2cbV58f/view?usp=drivesdk',
+        description: 'ACCESS RESTRICTED • AUTHOR APPROVAL REQUIRED'
+      }
+    ]
   }
 ];
 
@@ -109,27 +116,55 @@ export const SKILLS: Skill[] = [
   {
     title: 'AI Prompt Engineering',
     description: 'Writing structured prompts to generate accurate outputs, product flows, scripts, and automation logic.',
-    icon: 'BrainCircuit'
+    icon: 'BrainCircuit',
+    proofOfWork: 'GenApp Builder +4 more',
+    executions: [
+      { name: 'GenApp Builder', description: 'Autonomous AI orchestration for zero-code app development.' },
+      { name: 'AI Voice Agent', description: 'Conversational interface for testing voice-to-execution capabilities.' },
+      { name: 'Wealth Sprint', description: 'Complex prompt structures for financial decision-making logic.' },
+      { name: 'Money Tracker', description: 'Prompt-driven data architecture for personal cashflow tracking.' },
+      { name: 'No Longer Friends...', description: 'Published novel leveraging AI-assisted narrative structuring and psychological depth.' }
+    ]
   },
   {
     title: 'AI Automation',
     description: 'Exploring AI automation by building small workflows that deliver weekly financial updates to Gmail.',
-    icon: 'Cpu'
+    icon: 'Cpu',
+    proofOfWork: 'Deployed Weekly Analysis Pipeline',
+    executions: [
+      { name: 'Gmail Automation', description: 'Weekly financial data analysis delivered directly to inbox.' },
+      { name: 'Auto Client Numbers Extractor', description: 'AI-driven system extracting client data from Google Maps to structured Google Sheets.' }
+    ]
   },
   {
     title: 'Finance + Product Strategy',
     description: 'Understanding money flow, risk, compounding, emotional decision, and turning them into a MVP product. ',
-    icon: 'TrendingUp'
+    icon: 'TrendingUp',
+    proofOfWork: 'Architected Wealth Sprint & Money Tracker',
+    executions: [
+      { name: 'Wealth Sprint', description: 'A multi-modular financial learning system blending emotion and logic.' },
+      { name: 'Money Tracker', description: 'Comprehensive MVP for tracking personal cashflow and debt.' }
+    ]
   },
   {
     title: 'Narrative Psychology',
     description: 'Translating complex human behavior and emotional depth into structured, professional narratives and character-driven insights.',
-    icon: 'BookOpen'
+    icon: 'BookOpen',
+    proofOfWork: 'Published Novel: "No Longer Friends..."',
+    executions: [
+      { name: 'Published Novel', description: '"No Longer Friends But Not Strangers Yet" - A psychologically grounded literary work.' }
+    ]
   },
   {
     title: 'Builder Mindset',
-    description: 'Deeply focused on build fast → fail fast → learn fast → iterate fast. I believe in practical learning through building, teaching, and product design not just theory.',
-    icon: 'Hammer'
+    description: 'Focused on rapid execution and practical iteration. I transform theoretical concepts into published products and functional systems through design and engineering.',
+    icon: 'Hammer',
+    proofOfWork: 'From Concept to Published Reality',
+    executions: [
+      { name: 'Published Novel', description: 'Transitioned from creative concept to a market-ready published book.' },
+      { name: 'Functional Systems', description: 'Shipped multiple functional utility applications and financial architectures.' },
+      { name: 'Wealth Sprint Ecosystem', description: 'A central project where technical experiments converge into a market-facing solution.' }
+    ]
   }
 ];
 
