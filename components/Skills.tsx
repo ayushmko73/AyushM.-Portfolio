@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
         <p className="text-slate-400 max-w-xl">Technical skills paired with a strategic product lens.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {SKILLS.map((skill, index) => (
           <motion.div
             key={skill.title}

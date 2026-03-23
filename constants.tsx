@@ -156,6 +156,16 @@ export const SKILLS: Skill[] = [
     ]
   },
   {
+    title: 'AI-Augmented Creative Writing',
+    description: 'Specializing in the synthesis of generative AI and literary craftsmanship to architect complex narratives and psychologically resonant character arcs.',
+    icon: 'FileCode2',
+    proofOfWork: 'Published Debut Novel at 17',
+    executions: [
+      { name: 'Published Novel', description: '"No Longer Friends But Not Strangers Yet" - A debut work leveraging AI for structural refinement and emotional depth.' },
+      { name: 'Narrative Engineering', description: 'Proven track record of using LLMs to bridge the gap between abstract human emotion and structured storytelling.' }
+    ]
+  },
+  {
     title: 'Builder Mindset',
     description: 'Focused on rapid execution and practical iteration. I transform theoretical concepts into published products and functional systems through design and engineering.',
     icon: 'Hammer',
