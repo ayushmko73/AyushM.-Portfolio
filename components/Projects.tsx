@@ -28,9 +28,16 @@ const ProjectCard: React.FC<{ project: Project; onOpen: (p: Project) => void }> 
       onClick={() => onOpen(project)}
     >
       <div className="flex justify-between items-center mb-5">
-        <span className={`px-2.5 py-0.5 rounded-lg text-[8.5px] font-bold uppercase tracking-wider border ${getStatusColor(project.status)}`}>
-          {project.status}
-        </span>
+        <div className="flex items-center gap-2">
+          <span className={`px-2.5 py-0.5 rounded-lg text-[8.5px] font-bold uppercase tracking-wider border ${getStatusColor(project.status)}`}>
+            {project.status}
+          </span>
+          {project.tags.includes('MOBILE RESPONSIVE') && (
+            <span className="px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[7px] font-black uppercase tracking-widest flex items-center gap-1">
+              <Sparkles size={8} /> Mobile Responsive
+            </span>
+          )}
+        </div>
         <div className="text-slate-600 group-hover:text-blue-400 transition-colors">
           <ChevronRight size={16} />
         </div>
@@ -112,7 +119,14 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           {/* Header */}
           <div className="p-6 pb-2 flex items-start justify-between">
             <div className="space-y-0.5">
-              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-blue-400 block">{project.status}</span>
+              <div className="flex items-center gap-2">
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-blue-400 block">{project.status}</span>
+                {project.tags.includes('MOBILE RESPONSIVE') && (
+                  <span className="px-1.5 py-0.5 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20 text-[7px] font-black uppercase tracking-widest flex items-center gap-1">
+                    <Sparkles size={8} /> Mobile Responsive
+                  </span>
+                )}
+              </div>
               <h3 className="text-2xl font-bold text-white tracking-tight">{project.title}</h3>
             </div>
             <button 
