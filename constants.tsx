@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     description: 'A finance learning product that blends emotion + logic + real-world money decisions into an interactive system. This is the central core of my entrepreneurial vision, where all other technical experiments converge into a single market-facing solution.',
     outcome: 'Blends emotion and logic into an interactive finance learning system.',
     role: 'Solo Product Designer & Builder',
-    tags: ['FINANCE', 'STRUCTURED & LOGICAL THINKING', 'DESIGNING', 'PROMPTING'],
+    tags: ['FINANCE', 'STRUCTURED & LOGICAL THINKING', 'DESIGNING', 'PROMPTING', 'MOBILE RESPONSIVE'],
     seoDescription: 'Wealth Sprint is the primary compounding project by Ayush M., integrating AI automation, financial tracking, and behavioral psychology into one modular ecosystem.',
     seoKeywords: ['fintech ecosystem', 'compounding systems', 'wealth sprint', 'ayush m projects'],
     subLinks: [
@@ -62,13 +62,12 @@ export const PROJECTS: Project[] = [
   {
     id: 'money-tracker',
     title: 'Money Tracker',
-    status: ProjectStatus.IN_PROGRESS,
-    link: 'https://moneytrackerr.vercel.app/',
+    status: ProjectStatus.LIVE,
+    link: 'https://moneytrackerv2.vercel.app/',
     description: 'Tracks income, expenses, debt, and cashflow — built to understand money movement clearly. This provides the fundamental data architecture for Wealth Sprint\'s analytical core.',
     outcome: 'A comprehensive MVP for tracking personal cashflow and debt.',
     role: 'Solo Product Builder',
-    tags: ['FINANCE', 'PROMPTING', 'DATABASE INTEGRATION'],
-    leftToIntegrate: ['backend database integration', 'Auth & User security'],
+    tags: ['FINANCE', 'PROMPTING', 'DATABASE INTEGRATION', 'MOBILE RESPONSIVE'],
     seoDescription: 'A clean, systematic approach to tracking personal cashflow, debt, and income built as an MVP for financial clarity.',
     seoKeywords: ['money tracker', 'cashflow tracking', 'debt management']
   },
